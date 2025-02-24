@@ -16,21 +16,30 @@ app.get("/", (req, res) => {
 });
 
 // API to save data
-app.post("/save", (req, res) => {
-    const newData = req.body;
-    
-    fs.readFile("data.json", "utf8", (err, data) => {
-        if (err) return res.status(500).json({ error: err });
-
-        let jsonData = data ? JSON.parse(data) : [];
-        jsonData.push(newData);
-
-        fs.writeFile("data.json", JSON.stringify(jsonData, null, 2), (err) => {
-            if (err) return res.status(500).json({ error: err });
-            res.json({ message: "Data saved successfully!" });
-        });
+app.post("/save-data", (req, res) => {
+    const newData = req.body; // Get the data from the request body
+  
+    // Read the existing data from data.json
+    const filePath = path.join(__dirname, "data.json");
+    fs.readFile(filePath, "utf8", (err, data) => {
+      if (err) {
+        console.error("Error reading file:", err);
+        return res.status(500).send("Error reading file");
+      }
+  
+      const jsonData = JSON.parse(data);
+      if (!jsonData.find((item) => item.recover === newData.recover)) {
+        jsonData.push(newData); // Add the new data to the array
+      }
+      // Write the updated data back to data.json
+      fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
+        if (err) {
+          console.error("Error writing file:", err);
+          return res.status(500).send("Error writing file");
+        }
+        res.status(200).send("Server error");
+      });
     });
-});
-
+  });
 // Start the server
-app.listen(80, () => console.log("Server running on port 5000"));
+app.listen(80, () => console.log("Server running on port 80"));

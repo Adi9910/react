@@ -1,0 +1,150 @@
+body {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-parent-top {
+  background: white;
+  min-height: 400px;
+  min-width: 300px;
+  max-height: 590px;
+  max-width: 400px;
+  padding: 0% 6%;
+  border-radius: 20px;
+}
+.main-parent-heading-meta {
+  font-size: 32px;
+  line-height: 1.1;
+  color: rgb(92, 92, 92);
+  font-weight: 550;
+  text-align: center;
+  padding: 6% 0% 1% 0%;
+  margin-top: -5%;
+  font-stretch: condensed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -2px;
+}
+
+.main-parent-heading {
+  font-size: 32px;
+  line-height: 1.1;
+  color: rgb(92, 92, 92);
+  font-weight: 800 !important;
+  text-align: center;
+  padding: 6% 0% 1% 0%;
+  font-family: "Poppins";
+}
+
+.main-parent-child-1 {
+  padding: 3% 0%;
+}
+
+.child-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.section-input-heading {
+  color: rgb(92, 92, 92);
+  font-weight: 500;
+  font-family: "Poppins";
+  font-size: 20px;
+}
+
+.show-input {
+  color: rgb(92, 92, 92);
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Poppins";
+  font-size: 20px;
+}
+
+.input-box-div {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.input-box-div-confirm {
+  width: 100%;
+  margin-top: 6px;
+  position: relative;
+}
+
+.input-field {
+  width: 94%;
+  color: rgb(165, 165, 165);
+  background-color: white;
+  height: 60px;
+  border-radius: 4px;
+  padding: 0px 10px;
+  font-size: 20px;
+  border: 2px solid rgb(165, 165, 165);
+}
+
+.password-strength {
+  color: rgb(83, 83, 83);
+  text-align: left;
+  margin-top: -10px;
+  font-size: 12px;
+  font-weight: 600;
+  height: 20px;
+  font-family: "Poppins";
+}
+.character-filed {
+  font-size: 13px;
+  color: rgb(96, 96, 96);
+  text-align: left;
+  margin-top: -15px;
+  font-weight: 500;
+  font-family: "Poppins";
+}
+#checkIcon {
+  position: absolute;
+  z-index: 200;
+  right: 12%;
+  top: 22%;
+  font-size: 21px;
+}
+.main-parent-button {
+  width: 102%;
+  padding: 3% 0%;
+}
+
+.button-box {
+  background: rgb(96, 191, 226);
+  width: 100%;
+  border-radius: 30px;
+  height: 60px;
+  font-size: 19px;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: "Poppins";
+}
+
+.message-popup {
+  color: red;
+  border: 2px solid red;
+  font-family: "Poppins";
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: pink;
+}
+
+.final-field {
+  font-size: 12px;
+  width: 90%;
+  color: rgb(96, 96, 96);
+  font-weight: 500;
+  position: fixed;
+  bottom: 10px;
+  left: 5%;
+  font-family: "Poppins";
+}
+a {
+  text-decoration: underline;
+  font-family: "Poppins";
+  color: rgb(96, 96, 96);
+}

