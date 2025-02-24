@@ -5,15 +5,17 @@ body {
 
 .main-parent-top {
   background: white;
+  position: fixed;
+  top: 7px;
   min-height: 400px;
   min-width: 300px;
   max-height: 590px;
   max-width: 400px;
-  padding: 0% 6%;
+  padding: 0% 8%;
   border-radius: 20px;
 }
 .main-parent-heading-meta {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.1;
   color: rgb(92, 92, 92);
   font-weight: 550;
@@ -26,17 +28,17 @@ body {
 }
 
 .main-parent-heading {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.1;
   color: rgb(92, 92, 92);
   font-weight: 800 !important;
   text-align: center;
-  padding: 6% 0% 1% 0%;
+  padding: 4% 0% 1% 0%;
   font-family: "Poppins";
 }
 
 .main-parent-child-1 {
-  padding: 3% 0%;
+  padding: 2% 0%;
 }
 
 .child-header {
@@ -49,7 +51,7 @@ body {
   color: rgb(92, 92, 92);
   font-weight: 500;
   font-family: "Poppins";
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .show-input {
@@ -57,7 +59,7 @@ body {
   cursor: pointer;
   font-weight: 500;
   font-family: "Poppins";
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .input-box-div {
@@ -75,10 +77,10 @@ body {
   width: 94%;
   color: rgb(165, 165, 165);
   background-color: white;
-  height: 60px;
+  height: 40px;
   border-radius: 4px;
   padding: 0px 10px;
-  font-size: 20px;
+  font-size: 16px;
   border: 2px solid rgb(165, 165, 165);
 }
 
@@ -102,9 +104,9 @@ body {
 #checkIcon {
   position: absolute;
   z-index: 200;
-  right: 12%;
-  top: 22%;
-  font-size: 21px;
+  right: 1%;
+  top: 18%;
+  font-size: 16px;
 }
 .main-parent-button {
   width: 102%;
@@ -115,12 +117,18 @@ body {
   background: rgb(96, 191, 226);
   width: 100%;
   border-radius: 30px;
-  height: 60px;
-  font-size: 19px;
+  height: 45px;
+  font-size: 17px;
   color: white;
   font-weight: 800;
   cursor: pointer;
   font-family: "Poppins";
+}
+
+.character-field {
+  text-align: left;
+  font-size: 12px;
+  color: rgb(83, 83, 83);
 }
 
 .message-popup {
