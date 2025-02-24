@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+</head>
+<body>
+    <h2>Enter Data</h2>
+    <input id="textInput" type="text" placeholder="Enter text">
+    <button onclick="saveData()">Save</button>
+
+    <script>
+        function saveData() {
+            const count = document.getElementById("textInput").value;
+
+            if (count !== "") {
+                fetch("/save", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: count }),
+                })
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error("Error:", error));
+            }
+        }
+    </script>
+</body>
+</html>
